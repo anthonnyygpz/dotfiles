@@ -1,0 +1,183 @@
+// ─────────────────────────────────────────────────────────────
+// Keymaps estilo LazyVim. Leader = <space>, localleader = ,
+// Solo van aquí los comandos de VS Code: los motions, operators
+// y textobjects de vim ya son nativos de VSCodeVim y no se tocan.
+// Todos los command ids verificados contra Code-OSS 1.138.0.
+// ─────────────────────────────────────────────────────────────
+[
+  // ── <leader>f archivos ──────────────────────────────────────
+  { "key": "space f f", "command": "workbench.action.quickOpen" },
+  { "key": "space f F", "command": "workbench.action.files.openFile" },
+  { "key": "space f d", "command": "workbench.action.files.openFolder" },
+  { "key": "space f r", "command": "workbench.action.openRecent" },
+  { "key": "space f s", "command": "workbench.action.files.saveAs" },
+  { "key": "space f S", "command": "workbench.action.files.saveAll" },
+  { "key": "space f w", "command": "workbench.action.files.newUntitledFile" },
+  { "key": "space f g", "command": "workbench.action.findInFiles" },
+
+  // ── <leader>b buffers ──────────────────────────────────────
+  { "key": "space b p", "command": "workbench.action.previousEditor" },
+  { "key": "space b P", "command": "workbench.action.nextEditor" },
+  { "key": "space b d", "command": "workbench.action.closeActiveEditor" },
+  { "key": "space b c", "command": "workbench.action.reopenClosedEditor" },
+  { "key": "space b h", "command": "workbench.action.navigateBack" },
+  { "key": "space b l", "command": "workbench.action.navigateForward" },
+  { "key": "space b 0", "command": "workbench.action.quickOpenPreviousEditor" },
+  { "key": "space b 1", "command": "workbench.action.openEditorAtIndex1" },
+  { "key": "space b 2", "command": "workbench.action.openEditorAtIndex2" },
+  { "key": "space b 3", "command": "workbench.action.openEditorAtIndex3" },
+  { "key": "space b 4", "command": "workbench.action.openEditorAtIndex4" },
+  { "key": "space b 5", "command": "workbench.action.openEditorAtIndex5" },
+  { "key": "space b 6", "command": "workbench.action.openEditorAtIndex6" },
+  { "key": "space b 7", "command": "workbench.action.openEditorAtIndex7" },
+  { "key": "space b 8", "command": "workbench.action.openEditorAtIndex8" },
+  { "key": "space b 9", "command": "workbench.action.openEditorAtIndex9" },
+
+  // ── <leader>s búsqueda y edición ────────────────────────────
+  { "key": "space s f", "command": "actions.find" },
+  { "key": "space s F", "command": "editor.action.startFindReplaceAction" },
+  { "key": "space s r", "command": "workbench.action.replaceInFiles" },
+  { "key": "space s w", "command": "editor.action.trimTrailingWhitespace" },
+  { "key": "space s c", "command": "editor.action.commentLine" },
+  { "key": "space s n", "command": "editor.action.marker.next" },
+  { "key": "space s p", "command": "editor.action.marker.prev" },
+  { "key": "space s x", "command": "workbench.action.tasks.runTask" },
+
+  // ── <leader>s splits y ventanas ────────────────────────────
+  {
+    "key": "space s v",
+    "command": "workbench.action.duplicateActiveEditorGroupRight"
+  },
+  {
+    "key": "space s s",
+    "command": "workbench.action.duplicateActiveEditorGroupDown"
+  },
+  { "key": "space s h", "command": "workbench.action.focusLeftGroup" },
+  { "key": "space s j", "command": "workbench.action.focusBelowGroup" },
+  { "key": "space s k", "command": "workbench.action.focusAboveGroup" },
+  { "key": "space s l", "command": "workbench.action.focusRightGroup" },
+  { "key": "space s q", "command": "workbench.action.closeActiveEditor" },
+  { "key": "space s e", "command": "workbench.action.joinAllGroups" },
+
+  // ── <leader>c conversiones de caso ──────────────────────────
+  { "key": "space c u", "command": "editor.action.transformToUppercase" },
+  { "key": "space c l", "command": "editor.action.transformToLowercase" },
+  { "key": "space c t", "command": "editor.action.transformToTitlecase" },
+  { "key": "space c c", "command": "editor.action.transformToCamelcase" },
+  { "key": "space c p", "command": "editor.action.transformToPascalcase" },
+  { "key": "space c s", "command": "editor.action.transformToSnakecase" },
+
+  // ── <leader>l LSP ───────────────────────────────────────────
+  { "key": "space l d", "command": "editor.action.rename" },
+  { "key": "space l f", "command": "editor.action.formatDocument" },
+  { "key": "space l F", "command": "editor.action.formatSelection" },
+  { "key": "space l i", "command": "editor.action.triggerParameterHints" },
+  { "key": "space l a", "command": "editor.action.quickFix" },
+  { "key": "space l r", "command": "editor.action.refactor" },
+  { "key": "space l R", "command": "editor.action.goToReferences" },
+  { "key": "space l I", "command": "editor.action.organizeImports" },
+  { "key": "space l D", "command": "editor.action.revealDefinition" },
+  { "key": "space l s", "command": "workbench.action.showAllSymbols" },
+  { "key": "space l x", "command": "workbench.actions.view.problems" },
+
+  // ── <leader>w ventanas y paneles ────────────────────────────
+  {
+    "key": "space w s",
+    "command": "workbench.action.duplicateActiveEditorGroupDown"
+  },
+  {
+    "key": "space w v",
+    "command": "workbench.action.duplicateActiveEditorGroupRight"
+  },
+  { "key": "space w w", "command": "workbench.action.focusNextGroup" },
+  { "key": "space w W", "command": "workbench.action.focusPreviousGroup" },
+  { "key": "space w h", "command": "workbench.action.focusLeftGroup" },
+  { "key": "space w l", "command": "workbench.action.focusRightGroup" },
+  { "key": "space w j", "command": "workbench.action.focusBelowGroup" },
+  { "key": "space w k", "command": "workbench.action.focusAboveGroup" },
+  { "key": "space w q", "command": "workbench.action.closeAllEditors" },
+  { "key": "space w f", "command": "workbench.action.toggleFullScreen" },
+  {
+    "key": "space w m",
+    "command": "workbench.action.toggleMaximizeEditorGroup"
+  },
+  { "key": "space w z", "command": "workbench.action.toggleZenMode" },
+  { "key": "space w e", "command": "workbench.view.explorer" },
+  {
+    "key": "space e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "explorerViewletVisible && explorerViewletFocus"
+  },
+  {
+    "key": "space e",
+    "command": "workbench.view.explorer",
+    "when": "!explorerViewletVisible || !explorerViewletFocus"
+  },
+  { "key": "space w g", "command": "workbench.view.scm" },
+  { "key": "space w r", "command": "workbench.view.search" },
+  { "key": "space w d", "command": "workbench.view.debug" },
+  { "key": "space w b", "command": "workbench.view.extensions" },
+
+  // ── <leader>g git ───────────────────────────────────────────
+  { "key": "space g g", "command": "workbench.view.scm" },
+  { "key": "space g G", "command": "git.checkout" },
+  { "key": "space g s", "command": "git.stageAll" },
+  { "key": "space g u", "command": "git.unstageAll" },
+  { "key": "space g c", "command": "git.commit" },
+  { "key": "space g p", "command": "git.push" },
+  { "key": "space g f", "command": "git.fetch" },
+  { "key": "space g l", "command": "git.pull" },
+  { "key": "space g d", "command": "git.openChange" },
+  { "key": "space g r", "command": "git.refresh" },
+
+  // ── <leader>t terminal ──────────────────────────────────────
+  { "key": "space t t", "command": "workbench.action.terminal.toggleTerminal" },
+  { "key": "space t n", "command": "workbench.action.terminal.new" },
+  { "key": "space t s", "command": "workbench.action.terminal.split" },
+  { "key": "space t k", "command": "workbench.action.terminal.kill" },
+  { "key": "space t c", "command": "workbench.action.terminal.clear" },
+  { "key": "space t r", "command": "workbench.action.terminal.rename" },
+  { "key": "space t p", "command": "workbench.action.terminal.focusPrevious" },
+
+  // ── <leader>m misc ──────────────────────────────────────────
+  { "key": "space m l", "command": "workbench.action.debug.start" },
+  {
+    "key": "space m t",
+    "command": "workbench.action.tasks.configureTaskRunner"
+  },
+  { "key": "space m r", "command": "workbench.action.tasks.restartTask" },
+  { "key": "space m k", "command": "workbench.action.tasks.terminate" },
+  { "key": "space m b", "command": "workbench.action.tasks.build" },
+  { "key": "space m i", "command": "workbench.action.selectTheme" },
+  { "key": "space m q", "command": "workbench.action.quit" },
+
+  // ── <leader>1..9, 0, [ ] ────────────────────────────────────
+  { "key": "space 1", "command": "workbench.action.openEditorAtIndex1" },
+  { "key": "space 2", "command": "workbench.action.openEditorAtIndex2" },
+  { "key": "space 3", "command": "workbench.action.openEditorAtIndex3" },
+  { "key": "space 4", "command": "workbench.action.openEditorAtIndex4" },
+  { "key": "space 5", "command": "workbench.action.openEditorAtIndex5" },
+  { "key": "space 6", "command": "workbench.action.openEditorAtIndex6" },
+  { "key": "space 7", "command": "workbench.action.openEditorAtIndex7" },
+  { "key": "space 8", "command": "workbench.action.openEditorAtIndex8" },
+  { "key": "space 9", "command": "workbench.action.openEditorAtIndex9" },
+  { "key": "space 0", "command": "workbench.action.quickOpenPreviousEditor" },
+  { "key": "space [", "command": "workbench.action.previousEditor" },
+  { "key": "space ]", "command": "workbench.action.nextEditor" },
+
+  // ── ayuda ──────────────────────────────────────────────────
+  { "key": "space ?", "command": "workbench.action.keybindingsReference" },
+  { "key": "space ,", "command": "workbench.action.showCommands" },
+  { "key": "space ;", "command": "workbench.action.showCommands" },
+
+  // ── navegación estilo <C-w> ────────────────────────────────
+  { "key": "ctrl+h", "command": "workbench.action.navigateLeft" },
+  { "key": "ctrl+l", "command": "workbench.action.navigateRight" },
+  { "key": "ctrl+j", "command": "workbench.action.navigateDown" },
+  { "key": "ctrl+k", "command": "workbench.action.navigateUp" },
+
+  // ── terminal sin leader ────────────────────────────────────
+  { "key": "ctrl+`", "command": "workbench.action.terminal.toggleTerminal" },
+  { "key": "ctrl+shift+5", "command": "workbench.action.terminal.split" },
+  { "key": "ctrl+shift+`", "command": "workbench.action.terminal.new" }
+]
